@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="InteractiveAuto.Client/InteractiveAuto.Client.csproj" />
+  <Project Path="InteractiveAuto/InteractiveAuto.csproj" />
+</Solution>
