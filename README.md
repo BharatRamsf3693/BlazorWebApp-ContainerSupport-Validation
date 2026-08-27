@@ -8,7 +8,7 @@ Ensure the following software is installed before running the samples:
 
 - .NET SDK: **11.0.100-preview.7.26381.103**
 - Visual Studio 2026 Insiders: **[12023.133] Professional**
-- Any container engine that is compatible with the **Docker** daemon
+- Any application (such as Docker Desktop or Rancher Desktop) that provides a **Docker daemon container engine**
 
 ### Context Menu Samples
 
