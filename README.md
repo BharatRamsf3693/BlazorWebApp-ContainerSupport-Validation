@@ -42,19 +42,34 @@ For these samples, container support was enabled from the creation dialog during
 ### Steps
 
 1. Open a terminal and navigate to the directory containing the sample's `Dockerfile`.
-   - For `InteractiveWebAssembly` and `InteractiveAuto`, navigate to the **Server** project's directory.
+   - For `InteractiveWebAssembly` and `InteractiveAuto`, navigate to the **solution root directory**.
 2. Ensure that **Docker Desktop** or **Rancher Desktop** is running.
 3. Build the container image.
 
-   Example:
+For Static SSR and Interactive Server.
+   
+```bash
+docker build -t image-name .
 
-   ```bash
-   docker build -t interactive-server .
+Example
+docker build -t interactive-server .
+```
 
-4. Run the container.
+For Interactive WebAssembly and Interactive Auto samples, run the Docker build command from the solution root directory.
 
-   Example:
+```bash
+docker build -f ProjectName/Dockerfile -t image-name .
 
-   ```bash
-   docker run -p 9005:8080 --name interactive-server interactive-server
-5. Open the containerized application in your browser: http://localhost:9005
+Example
+docker build -f InteractiveWebAssembly/Dockerfile -t interactive-webassembly .
+```
+
+5. Run the container.
+
+ ```bash
+docker run -p 9005:8080 --name=container-name image-name
+
+Example:
+docker run -p 9005:8080 --name=interactive-server interactive-server
+```
+7. Open the containerized application in your browser: http://localhost:9005
